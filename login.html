@@ -30,19 +30,19 @@
     </div>
 
     <main class="main-fondo">
-        <div class="contenedor flex contenedor-inicio">
+        <div class="contenedor flex contenedor-inicio" data-form>
             <h2 class="titulo-inicio">Iniciar sesión</h2>
 
             <span class="input-message-error">Este campo no es válido</span>
-            <input type="text" class="input-text inputs" placeholder="Escriba su correo electrónico" data-tipo="correo" required>
+            <input type="text" class="input-text inputs" placeholder="Escriba su correo electrónico" data-tipo="correo" id="correo" required>
 
             <div>
                 <span class="input-message-error">Este campo no es válido</span>
-                <input type="text" class="input-text inputs" placeholder="Escriba su contraseña" data-tipo="contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
+                <input type="password" class="input-text inputs" placeholder="Escriba su contraseña" data-tipo="contraseña" id="contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
                 title="Al menos 6 caracteres y máximo 12, debe contener una letra minúscula, una letra mayúscula y un número. No puede contener caracteres especiales">
             </div>
             
-            <a class="btn-inicio btn-form" href="/index-cliente.html">Entrar</a>
+            <a class="btn-inicio btn-form" id="btnEntrar" href="#">Entrar</a>
         </div>
     </main>
 
