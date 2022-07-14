@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [ 
+    {
+      "email": "admin@correo.com",
+      "pass": "Admin1",
+      "id": "1"
+    },
+    {
+      "email": "cliente@correo.com",
+      "pass": "Cliente1",
+      "id": "2"
+    }
+  ]
+}
