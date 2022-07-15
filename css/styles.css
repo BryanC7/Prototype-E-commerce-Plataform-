@@ -420,6 +420,12 @@ label {
     font-size: 3rem;
     font-weight: 500;
 }
+.alerta {
+    color: var(--alerta);
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
 @media (max-width: 1140px) {
     .contenedor-productos {
         width: 90%;
