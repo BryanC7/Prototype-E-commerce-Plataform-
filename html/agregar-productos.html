@@ -40,7 +40,13 @@
             </div>
             <div>
                 <span class="input-message-error">Este campo no es válido</span>
-                <input type="text" class="input-text inputs" placeholder="Categoría" required data-tipo="categoria">
+                <!-- <input type="text" class="input-text inputs" placeholder="Categoría" required data-tipo="categoria"> -->
+                <select class="input-text inputs" name="select">
+                    <option value="0" disabled selected>-- Seleccionar Categoría --</option>
+                    <option value="Star Wars">Star Wars</option>
+                    <option value="Consolas">Consolas</option>
+                    <option value="Diversos">Diversos</option>
+                </select>
     
             </div>
             <div>
@@ -53,7 +59,7 @@
             </div>
             <div>
                 <span class="input-message-error">Este campo no es válido</span>
-                <input type="text" class="input-text inputs" placeholder="Descripción del producto" minlength="5" maxlength="150" required data-tipo="descripcion">
+                <input type="text" class="input-text inputs" placeholder="Descripción del producto" minlength="5" maxlength="150" data-tipo="descripcion">
             </div>
 
             <a class="btn-inicio btn-form" id="btnAgregar" href="#">Agregar producto</a>
