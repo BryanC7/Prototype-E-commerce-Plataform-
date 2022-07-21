@@ -16,14 +16,14 @@ function imprimirProducto() {
         `
         <img class="imagen-card" src= ${producto.url} alt="Producto">
         <p>${producto.nombre}</p>
-        <p>$${producto.precio}</p>
+        <p>$${producto.precio}.00</p>
         <a class="ver-producto" href="#">Ver producto</a>
         `
-        if(producto.categoria === 'star wars') {
+        if(producto.categoria === 'Star Wars') {
             starWars.appendChild(card)
-        } else if (producto.categoria === 'consolas') {
+        } else if (producto.categoria === 'Consolas') {
             consolas.appendChild(card)
-        } else if (producto.categoria === 'diversos'){
+        } else if (producto.categoria === 'Diversos'){
             diversos.appendChild(card)
         } else {
             return

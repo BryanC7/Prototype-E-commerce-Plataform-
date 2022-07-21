@@ -35,18 +35,6 @@ const mensajesDeError = {
     contraseña: {
         valueMissing: 'El campo contraseña no puede estar vacío',
         patternMismatch: 'Al menos 6 caracteres y máximo 12, debe contener una letra minúscula y una letra mayúscula. No puede contener caracteres especiales'
-    },
-    url: {
-        valueMissing: 'El campo url no puede estar vacío'
-    },
-    categoria: {
-        valueMissing: 'El campo categoria no puede estar vacío'
-    },
-    precio: {
-        valueMissing: 'El campo precio no puede estar vacío'
-    },
-    descripcion: {
-        valueMissing: 'El campo descripcion no puede estar vacío'
     }
 }
 

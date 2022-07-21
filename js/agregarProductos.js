@@ -1,51 +1,67 @@
 // ! Comprobar inputs vacios
-// Todo: Declarar constantes 1 por 1 
-const inputProductos = document.querySelectorAll('.inputs')
+
+const url = document.querySelector('#url')
+const categoria = document.querySelector('#categoria')
+const nombre = document.querySelector('#nombre')
+const precio = document.querySelector('#precio')
 const btnAgregar = document.querySelector('#btnAgregar')
 const formularioProductos = document.querySelector('.contenedor-productos')
 const contenedorAlerta = document.createElement('div')
 
-// btnAgregar.addEventListener('click', inputsVacios)
-// Todo: Refactorizar código y retornar en un booleano
-function validarFormulario(data) {
-    inputProductos.forEach(inputs => {
-        if(inputs.value === '' || inputs.value == 0) {
-            limpiarAlerta()
-            let alerta = document.createElement('p')
-            alerta.textContent = 'Debes rellenar todos los campos'
-            alerta.classList.add('alerta')
-            btnAgregar.style.pointerEvents = "none"
-            btnAgregar.style.cursor = "default"
-            contenedorAlerta.appendChild(alerta)
-            formularioProductos.insertBefore(contenedorAlerta, btnAgregar)
-            setTimeout ( () => {
-                alerta.remove()
-                btnAgregar.style.pointerEvents = "auto"
-                btnAgregar.style.cursor = "pointer"
-            }, 3000)
-        }
-    })
-    return true
+function mostrarAlerta(mensaje) {
+    let alerta = document.createElement('p')
+    alerta.textContent = `${mensaje}` 
+    alerta.classList.add('alerta')
+    btnAgregar.style.pointerEvents = "none"
+    btnAgregar.style.cursor = "default"
+    contenedorAlerta.appendChild(alerta)
+    formularioProductos.insertBefore(contenedorAlerta, btnAgregar)
+    setTimeout ( () => {
+        alerta.remove()
+        btnAgregar.style.pointerEvents = "auto"
+        btnAgregar.style.cursor = "pointer"
+    }, 3000)
 }
 
-// Limpiar duplicados
-function limpiarAlerta() {
-    while(contenedorAlerta.firstChild) {
-        contenedorAlerta.removeChild(contenedorAlerta.firstChild)
+function validarFormulario(data) {
+    const { url, categoria, nombre, precio} = data
+    if(url === '' && categoria == 0 && nombre == 0 && precio == 0) {
+        mostrarAlerta('Debes rellenar todos los campos')
+        return true
+    } else if(url === '') {
+        mostrarAlerta('El campo url está vacío')
+        return true
+    } else if (categoria == 0) {
+        mostrarAlerta('El campo categoria está vacío')
+        return true
+    } else if (nombre == 0) {
+        mostrarAlerta('El campo nombre está vacío')
+        return true
+    } else if (precio == 0) {
+        mostrarAlerta('El campo precio está vacío')
+        return true
+    } else {
+        return false
     }
 }
 
 //! Agregar productos
 
 let cardProducto = JSON.parse(localStorage.getItem('productos'))
+window.addEventListener('DOMContentLoaded', consultarLocalStorage)
+
+function consultarLocalStorage() {
+    if(!cardProducto) {
+        cardProducto = []
+    }
+}
 
 function agregarProducto() {
     const objetoProducto = {
-        url: inputProductos[0].value,
-        categoria: inputProductos[1].value,
-        nombre: inputProductos[2].value,
-        precio: inputProductos[3].value,
-        descripcion: inputProductos[4].value
+        url: url.value,
+        categoria: categoria.value,
+        nombre: nombre.value,
+        precio: precio.value
     }
     if(validarFormulario(objetoProducto)) {
         return
@@ -53,7 +69,6 @@ function agregarProducto() {
     console.log(objetoProducto)
     cardProducto = [...cardProducto, objetoProducto]
     localStorage.setItem('productos',  JSON.stringify(cardProducto))
-    console.log(cardProducto)
 }
 
 btnAgregar.addEventListener('click', agregarProducto)

@@ -181,6 +181,8 @@ h1,h2,h3 {
 }
 .imagen-card {
     width: auto;
+    max-width: 26.4rem;
+    max-height: 26.1rem;
 }
 .card {
     padding: 1rem 0;
@@ -254,6 +256,14 @@ label {
     font-size: 1.5rem;
 }
 .input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    resize: none;
+}
+.input-text-aux {
     width: 100%;
     border: none;
     padding: 1.5rem;
@@ -402,10 +412,15 @@ label {
     }
     .encabezado {
         flex-direction: column;
-        height: 15rem;
+        height: 13rem;
+        padding: 0;
+        margin-bottom: 2rem;
     }
     .btn-agregar {
         width: 100%;
+        text-align: center;
+    }
+    .titulo-productos {
         text-align: center;
     }
 }

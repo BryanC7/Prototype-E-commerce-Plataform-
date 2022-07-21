@@ -13,7 +13,7 @@ function imprimirProducto() {
         `
         <img class="imagen-card" src= ${producto.url} alt="Producto">
         <p>${producto.nombre}</p>
-        <p>${producto.precio}</p>
+        <p>$${producto.precio}.00</p>
         <a class="ver-producto" href="#">Ver producto</a>
         `
        productosAdmin.appendChild(card)

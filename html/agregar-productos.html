@@ -35,33 +35,33 @@
             <h2 class="titulo-inicio titulo-productos">Agregar nuevo producto</h2>
 
             <div>
-                <span class="input-message-error">Este campo no es válido</span>
-                <input type="text" class="input-text inputs" placeholder="URL de imágen" required data-tipo="url">
+                <input id="url" type="text" class="input-text-aux inputs" placeholder="URL de imágen" required>
             </div>
             <div>
-                <span class="input-message-error">Este campo no es válido</span>
-                <!-- <input type="text" class="input-text inputs" placeholder="Categoría" required data-tipo="categoria"> -->
-                <select class="input-text inputs" name="select">
+                <select id="categoria" class="input-text-aux inputs" name="select">
                     <option value="0" disabled selected>-- Seleccionar Categoría --</option>
                     <option value="Star Wars">Star Wars</option>
                     <option value="Consolas">Consolas</option>
                     <option value="Diversos">Diversos</option>
                 </select>
-    
             </div>
             <div>
-                <span class="input-message-error">Este campo no es válido</span>
-                <input type="text" class="input-text inputs" placeholder="Nombre del producto" required data-tipo="nombre">
+                <select id="nombre" class="input-text-aux inputs" name="select">
+                    <option value="0" disabled selected>-- Seleccionar Nombre --</option>
+                    <option value="Proyecto X">Proyecto X</option>
+                    <option value="Proyecto Y">Proyecto Y</option>
+                    <option value="Proyecto Z">Proyecto Z</option>
+                </select>
             </div>
             <div>
-                <span class="input-message-error">Este campo no es válido</span>
-                <input type="text" class="input-text inputs" placeholder="Precio del producto" required data-tipo="precio">
+                <select id="precio" class="input-text-aux inputs" name="select">
+                    <option value="0" disabled selected>-- Seleccionar Precio --</option>
+                    <option value="60">$60.00</option>
+                    <option value="150">$150.00</option>
+                    <option value="50">$50.00</option>
+                </select>
             </div>
-            <div>
-                <span class="input-message-error">Este campo no es válido</span>
-                <input type="text" class="input-text inputs" placeholder="Descripción del producto" minlength="5" maxlength="150" data-tipo="descripcion">
-            </div>
-
+          
             <a class="btn-inicio btn-form" id="btnAgregar" href="#">Agregar producto</a>
         </div>
     </main>
