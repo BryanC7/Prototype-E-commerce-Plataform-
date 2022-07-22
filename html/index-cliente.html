@@ -10,6 +10,7 @@
     <link href="../css/normalize.css" rel="stylesheet">
     <link rel="preload" href="../css/styles.css" as="style">
     <link href="../css/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body class="principal">
     <div class="contenedor header">
@@ -36,142 +37,39 @@
             <button class="btn-hero">Ver Consolas</button>
         </div>
     </div>
-    <main class="main contenedor">
-        <section class="productos flex">
-            <div class="flex encabezado">
-                <h2 class="titulo">Star Wars</h2>
-                <a class="ver-todo" href="#">Ver todo</a>
-            </div>
-
-            <div id="starwars" class="cards flex">
-                <div class="card">
-                    <img class="imagen-card" src="../img/Star Wars/1.png" alt="Producto 1">
-                    <p>Producto X</p>
-                    <p>$60.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Star Wars/2.png" alt="Producto 2">
-                    <p>Producto X</p>
-                    <p>$60.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Star Wars/3.png" alt="Producto 3">
-                    <p>Producto X</p>
-                    <p>$60.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Star Wars/4.png" alt="Producto 4">
-                    <p>Producto X</p>
-                    <p>$60.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Star Wars/5.png" alt="Producto 5">
-                    <p>Producto X</p>
-                    <p>$60.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Star Wars/6.png" alt="Producto 6">
-                    <p>Producto X</p>
-                    <p>$60.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
+    <main class="main-fondo">
+        <section>
+            <div class="container mb-5 mt-5">
+                <div class="row justify-content-between mx-auto">
+                    <h2 class="titulo justify-content-center justify-content-sm-start col-lg-4 col-md-6 col-sm-8 px-0 d-flex align-items-center">Star Wars</h2>
+                    <a class="ver-todo col-lg-2 col-md-2 col-sm-3 text-sm-end text-center" href="#">Ver todo</a>
                 </div>
             </div>
-        </section>
 
-        <section class="productos flex">
-            <div class="flex encabezado">
-                <h2 class="titulo">Consolas</h2>
-                <a class="ver-todo" href="#">Ver todo</a>
-            </div>
-
-            <div id="consolas" class="cards flex">
-                <div class="card">
-                    <img class="imagen-card" src="../img/Consolas/1.png" alt="Producto 1">
-                    <p>Producto Y</p>
-                    <p>$150.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Consolas/2.png" alt="Producto 2">
-                    <p>Producto Y</p>
-                    <p>$150.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Consolas/3.png" alt="Producto 3">
-                    <p>Producto Y</p>
-                    <p>$150.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Consolas/4.png" alt="Producto 4">
-                    <p>Producto Y</p>
-                    <p>$150.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Consolas/5.png" alt="Producto 5">
-                    <p>Producto Y</p>
-                    <p>$150.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Consolas/6.png" alt="Producto 6">
-                    <p>Producto Y</p>
-                    <p>$150.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="productos flex">
-            <div class="flex encabezado">
-                <h2 class="titulo">Diversos</h2>
-                <a class="ver-todo" href="#">Ver todo</a>
+            <div class="container">
+                <div class="row gap-3" id="starwars"></div>
             </div>
             
-            <div id="diversos" class="cards flex">
-                <div class="card">
-                    <img class="imagen-card" src="../img/Diversos/1.png" alt="Producto 1">
-                    <p>Producto Z</p>
-                    <p>$50.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
+            <div class="container mb-5 mt-5">
+                <div class="row justify-content-between mx-auto">
+                    <h2 class="titulo justify-content-center justify-content-sm-start col-lg-4 col-md-6 col-sm-8 px-0 d-flex align-items-center">Consolas</h2>
+                    <a class="ver-todo col-lg-2 col-md-2 col-sm-3 text-sm-end text-center" href="#">Ver todo</a>
                 </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Diversos/2.png" alt="Producto 2">
-                    <p>Producto Z</p>
-                    <p>$50.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
+            </div>
+
+            <div class="container">
+                <div class="row gap-3" id="consolas"></div>
+            </div>
+
+            <div class="container mb-5 mt-5">
+                <div class="row justify-content-between mx-auto">
+                    <h2 class="titulo justify-content-center justify-content-sm-start col-lg-4 col-md-6 col-sm-8 px-0 d-flex align-items-center">Diversos</h2>
+                    <a class="ver-todo col-lg-2 col-md-2 col-sm-3 text-sm-end text-center" href="#">Ver todo</a>
                 </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Diversos/3.png" alt="Producto 3">
-                    <p>Producto Z</p>
-                    <p>$50.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Diversos/4.png" alt="Producto 4">
-                    <p>Producto Z</p>
-                    <p>$50.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Diversos/5.png" alt="Producto 5">
-                    <p>Producto Z</p>
-                    <p>$50.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
-                <div class="card">
-                    <img class="imagen-card" src="../img/Diversos/6.png" alt="Producto 6">
-                    <p>Producto Z</p>
-                    <p>$50.00</p>
-                    <a class="ver-producto" href="#">Ver producto</a>
-                </div>
+            </div>
+
+            <div class="container">
+                <div class="row gap-3" id="diversos"></div>
             </div>
         </section>
     </main>
@@ -213,5 +111,8 @@
 
 <script src="../js/validarFormularios.js"></script>
 <script src="../js/imprimirProductosCliente.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

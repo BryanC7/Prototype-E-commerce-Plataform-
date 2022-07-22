@@ -47,8 +47,10 @@ function validarFormulario(data) {
 
 //! Agregar productos
 
-let cardProducto = JSON.parse(localStorage.getItem('productos'))
+btnAgregar.addEventListener('click', agregarProducto)
 window.addEventListener('DOMContentLoaded', consultarLocalStorage)
+
+let cardProducto = JSON.parse(localStorage.getItem('productos'))
 
 function consultarLocalStorage() {
     if(!cardProducto) {
@@ -61,7 +63,8 @@ function agregarProducto() {
         url: url.value,
         categoria: categoria.value,
         nombre: nombre.value,
-        precio: precio.value
+        precio: precio.value,
+        id: Date.now()
     }
     if(validarFormulario(objetoProducto)) {
         return
@@ -70,5 +73,3 @@ function agregarProducto() {
     cardProducto = [...cardProducto, objetoProducto]
     localStorage.setItem('productos',  JSON.stringify(cardProducto))
 }
-
-btnAgregar.addEventListener('click', agregarProducto)
