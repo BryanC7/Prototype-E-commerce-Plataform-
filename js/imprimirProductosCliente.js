@@ -1,15 +1,15 @@
 //! De localStorage hacia el DOM
 
-const productos = JSON.parse(localStorage.getItem('productos'))
-const starWars = document.querySelector('#starwars')
-const consolas = document.querySelector('#consolas')
-const diversos = document.querySelector('#diversos')
+let productos = JSON.parse(localStorage.getItem('productos'))
+let starWars = document.querySelector('#starwars')
+let consolas = document.querySelector('#consolas')
+let diversos = document.querySelector('#diversos')
 
 window.addEventListener('DOMContentLoaded', consultarData)
 
 function imprimirProducto() {
     productos.forEach(producto => {
-        const card = document.createElement('div')
+        let card = document.createElement('div')
         card.classList.add('my-2','mx-auto','px-0','py-0','col-xl-2','col-lg-3', 'col-md-3','col-sm-4', 'col-10')
         card.innerHTML = 
         `

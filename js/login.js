@@ -1,17 +1,17 @@
 //! Promise
     
-const email = document.querySelector('#correo')
-const pass = document.querySelector('#contraseña')
-const btnEntrar = document.querySelector('#btnEntrar')
+let email = document.querySelector('#correo')
+let pass = document.querySelector('#contraseña')
+let btnEntrar = document.querySelector('#btnEntrar')
 
 function login() {
-  const promise = new Promise( (resolve, reject) => {
-    const http = new XMLHttpRequest()
+  let promise = new Promise( (resolve, reject) => {
+    let http = new XMLHttpRequest()
     http.open('GET', 'http://localhost:3000/profile')
     http.send()
 
     http.onload = () => {
-      const response = JSON.parse(http.response)
+      let response = JSON.parse(http.response)
       if(http.status >= 400) {
         reject(response)
       } else {

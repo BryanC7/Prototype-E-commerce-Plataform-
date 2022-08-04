@@ -1,6 +1,6 @@
 //! Validación de formulario 
 
-const inputs = document.querySelectorAll('.input-text')
+let inputs = document.querySelectorAll('.input-text')
 
 inputs.forEach( input => {
     input.addEventListener('blur', input => {
@@ -9,7 +9,7 @@ inputs.forEach( input => {
 })
 
 function validar(input) {
-    const tipoDeInput = input.dataset.tipo
+    let tipoDeInput = input.dataset.tipo
     if(input.validity.valid) {
         input.parentElement.classList.remove('input-container--invalid')
         input.parentElement.querySelector('.input-message-error').innerHTML = ''
@@ -19,9 +19,9 @@ function validar(input) {
     }
 }
 
-const tiposDeErrores = ['valueMissing', 'typeMismatch', 'patternMismatch']
+let tiposDeErrores = ['valueMissing', 'typeMismatch', 'patternMismatch']
 
-const mensajesDeError = {
+let mensajesDeError = {
     nombre: {
         valueMissing: 'El campo nombre no puede estar vacío'
     },

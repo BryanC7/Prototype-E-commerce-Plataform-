@@ -7,6 +7,7 @@
     --gris-medio: #E5E7E9;
     --grisClaro: #DFE9F3;
     --alerta: #df2525;
+    --correcto: #2ECC71;
 }
 
 /*! Globales */
@@ -400,6 +401,12 @@ label {
     text-align: center;
     font-weight: 700;
     font-size: 2rem;
+}
+.correcto {
+    color: var(--correcto);
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem; 
 }
 @media (max-width: 1140px) {
     .contenedor-productos {
