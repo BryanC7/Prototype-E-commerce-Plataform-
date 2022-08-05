@@ -46,7 +46,7 @@ function consultarLocalStorage() {
 }
 
 function agregarProducto() {
-    if(titulo.value === 'Agregar nuevo producto') {
+    if(titulo.textContent === 'Agregar nuevo producto') {
         let objetoProducto = {
             url: url.value,
             categoria: categoria.value,
@@ -61,19 +61,20 @@ function agregarProducto() {
         cardProducto = [...cardProducto, objetoProducto]
         localStorage.setItem('productos',  JSON.stringify(cardProducto))
         mostrarAlerta('Producto agregado con éxito')
+        setTimeout(() => {
+            url.value = ''
+            categoria.value = 0
+            nombre.value = 0
+            precio.value = 0
+        }, 3000);
     } else {
         let dataStorage = JSON.parse(localStorage.getItem('productos'))
 
-        const urlInput = document.querySelector('#url')
-        const categoriaInput = document.querySelector('#categoria')
-        const nombreInput = document.querySelector('#nombre')
-        const precioInput = document.querySelector('#precio')
-   
         const productoActualizado = {
-            url: urlInput.value,
-            categoria: categoriaInput.value,
-            nombre: nombreInput.value,
-            precio: precioInput.value,
+            url: url.value,
+            categoria: categoria.value,
+            nombre: nombre.value,
+            precio: precio.value,
             id: Date.now()
         }
 
@@ -83,5 +84,8 @@ function agregarProducto() {
         
         localStorage.setItem('productos', JSON.stringify(dataStorage))
         mostrarAlerta('Editado correctamente')
+        setTimeout(() => {
+            window.location.href = 'index-administrador.html'
+        }, 3000);
     }
 }
