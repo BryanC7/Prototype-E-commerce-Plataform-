@@ -1,44 +1,18 @@
-import { mostrarAlerta } from './mostrarMensaje.js';
-
-let idProducto
+export let idProducto
 let editando
 
 const urlInput = document.querySelector('#url')
 const categoriaInput = document.querySelector('#categoria')
 const nombreInput = document.querySelector('#nombre')
 const precioInput = document.querySelector('#precio')
-const formularioProducto = document.querySelector('#formularioProducto')
 
 //! Editar productos 
 document.addEventListener('DOMContentLoaded' , () => {
-
-    formularioProducto.addEventListener('submit', actualizarProducto)
 
     const parametroURL = new URLSearchParams(window.location.search)
     idProducto = Number(parametroURL.get('id')) 
     obtenerProducto(idProducto)
 })
-
-function actualizarProducto(e) {
-    e.preventDefault()
-
-    const dataStorage = JSON.parse(localStorage.getItem('productos'))
-   
-    const productoActualizado = {
-        url: urlInput.value,
-        categoria: categoriaInput.value,
-        nombre: nombreInput.value,
-        precio: precioInput.value,
-        id: Number(idProducto)
-    }
-
-    console.log(dataStorage)
-    dataStorage.filter(objeto => objeto.id !== idProducto)
-    console.log(dataStorage)
-
-    localStorage.setItem('productos', JSON.stringify(productoActualizado))
-    mostrarAlerta('Editado correctamente')
-}
 
 //! Obtener producto
 function obtenerProducto(id) {

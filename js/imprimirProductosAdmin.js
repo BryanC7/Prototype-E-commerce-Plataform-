@@ -1,7 +1,7 @@
 //! De localStorage hacia el DOM
 let productos = JSON.parse(localStorage.getItem('productos'))
 let productosAdmin = document.querySelector('#productos')
-
+let cardProducto
 
 function imprimirProducto() {
     limpiarHtml()
@@ -71,7 +71,6 @@ function eliminarProductos(e) {
 
 //! Comprobar datos en el Ls
 function consultarData() {
-    let cardProducto = [...productos]
-    console.log(cardProducto)
+    cardProducto = [...productos]
     imprimirProducto()
 }
